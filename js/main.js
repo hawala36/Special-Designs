@@ -128,6 +128,7 @@ resetNav.onclick = function () {
   divBullets.style.display = "flex";
   //background
   window.localStorage.setItem("background", "yes");
+  clearInterval(backgroundTime);
   backgroundTime = setInterval(() => {
     let backgroundNum = Math.ceil(Math.random() * 10);
     if (backgroundNum === 6) {
